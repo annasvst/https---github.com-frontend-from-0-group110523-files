@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  border: 1px solid aqua;
+  margin: 0;
+}
+
+span {
+  height: 500px;
+}
+
+a {
+  /* inline, inline-block, and block */
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  height: 50px;
+}
+
+div {
+  display: inline-block;
+  /* margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px; */
+  margin: 5px 10px 20px 30px;
+}
+
+
+.box-model-div {
+  border: 5px solid green;
+  width: 500px;
+  /* height: 400px; */
+  /* Padding added to every side of the element if only one values is provided:
+  padding: 10px 10px 10px 10px;
+  */
+  padding: 10px;
+  /* Margin added to every side of the element if only one values is provided:
+  margin: 20px 20px 20px 20px;
+  */
+  margin: 20px;
+}
+
+.box-model-div > p {
+  text-align: justify;
+  margin: 0;
+}
+
+.css-units-div {
+  margin: 0;
+}
+
+.css-units-div > div {
+  margin: 0;
+  border: 1px solid green;
+  /* % width and heigh require an explicit value to be set for the parent element */
+  /* width: 80%;  */
+  height: 100vh;
+  width: 100vw;
+}
+/* Relative to whatever size parent element has  */
+/* .css-units-div > p::first-line {
+  
+  font-size: 2em;
+} */
+
+.css-units-div > p {
+  /* Relative to whatever size parent element has  */
+  font-size: 2rem;
+}
+

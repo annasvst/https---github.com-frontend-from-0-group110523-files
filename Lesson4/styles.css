@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.content {
+  height: 100vh;
+  font-size: 0; /* Fixes inline-block gap */
+  white-space: nowrap; /* Prevents line breaks */
+}
+
+.content--left {
+  width: 55vw;
+  background-color: lightblue;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content--right {
+  width: 45vw;
+  background-color: gray;
+  display: inline-block;
+  vertical-align: top;
+}

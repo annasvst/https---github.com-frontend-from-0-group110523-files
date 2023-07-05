@@ -1,0 +1,47 @@
+/* 
+Background color: #F1F2F3
+Google button color: #FFFFFF
+Github button color: #2F3337 
+Facebook button color: #385499
+Primary color: #0074CC
+Shadow for white card on the right:
+box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 24px 0px, rgba(0, 0, 0, 0.05) 0px 20px 48px 0px, rgba(0, 0, 0, 0.1) 0px 1px 4px 0px;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+main {
+  display: flex;
+}
+
+.content {
+  height: 100vh;
+}
+
+.content--left {
+  display: flex;
+  
+  align-items: center;
+  justify-content: flex-end;
+  width: 55vw;
+  background-color: #d0d0d0;
+}
+
+.content--right {
+  width: 45vw;
+  background-color: #45b7b7;
+}
+
+.content--inner {
+  margin-right: 20px;
+  min-width: 500px;
+  text-align: left;
+}

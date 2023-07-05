@@ -1,0 +1,52 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* Update to be HEX color at home */
+  border-bottom: 1px solid gray;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-a {
+  color: #000;
+
+}
+.header-ul {
+  display: flex;
+  padding-left: 0;
+}
+
+.header-ul > li {
+ padding: 0 7px;  
+}
+
+.header-ul > li > a {
+color: #000;
+}
+
+
+
+
+
+
+
+
+

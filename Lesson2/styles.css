@@ -1,0 +1,74 @@
+p {
+  background-color: lightgrey !important;
+}
+
+/* Precedence
+From the least important to the most important
+- external stylesheet
+- <style> tag in HTML document
+- Inline styles
+- !important 
+
+1. Do not mix different types of adding CSS (usualy, an external CSS file is used)
+2. Do not use "!important" unless it's absolutely necessary
+
+*/
+
+/* Selectors are used to apply styles to certain HTML elements */
+/* 
+- HTML elements - body, p, ul, ol, form, a, div, etc.
+- Class (used in most cases, used to select multiple elements) - .className (className is the name that you create yourself)
+- ID (must be unique) - #nameOfId
+- pseudo-class - a:hover (:nameOfPseudeClassSelector), you must use one of already defined selectors in CSS
+- pseudo-element - ::first-line (::nameOfPseudeClassSelector), you must use one of already defined selectors in CSS
+*/
+
+/* It selected all elements */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.unordered-list {
+  color: green;
+}
+
+#myId {
+  font-size: 30px;
+}
+
+a:hover {
+  color: brown;
+}
+
+p::first-line {
+  font-style: italic;
+  background-color: rgba(0,0,255, 0.9);
+}
+
+.text-centered {
+  text-align: center;
+}
+
+/* 
+  Colors
+  Standard colors (e.g. blue, red, yellow)
+  HEX - #000 #000000 both are black color (mostly used in frontend development)
+  RGB - rgb(0,0,0) (used less often than HEX)
+  RGBA - rgba(0,0,0,0.4) the last number is for opacity (transparency)
+  HSLA - the least used color
+
+  ! We do not mix different color types in the same project, only rgba is an exception and can be combined with other types when opacity is needed.
+ */
+
+ div {
+  border: 1px solid #000;
+  margin: 10px 0;
+ }
