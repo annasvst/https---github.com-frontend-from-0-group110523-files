@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
 }
 
 body {
@@ -28,8 +27,36 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 100px 1fr 500px;
+  grid-template-areas:
+  "header header header"
+  "sidebar-left content sidebar-right"
+  "sidebar-left footer footer";
+}
+
+.header {
+  /* grid-column: 1 / -1; */
+  grid-area: header;
 }
 
 .content > div {
   height: 300px;
+}
+.sidebar-left {
+  /* grid-row: 2 / -1; */
+  grid-area: sidebar-left;
+}
+
+.sidebar-right{
+  grid-area: sidebar-right;
+}
+.content {
+  grid-area: content;
+}
+
+.footer {
+  /* grid-column: 2 / -1; */
+  grid-area: footer;
 }
