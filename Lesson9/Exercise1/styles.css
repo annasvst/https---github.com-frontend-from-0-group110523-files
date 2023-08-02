@@ -2,6 +2,26 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  /* min-width: 300px; */
+  max-width: 2400px;
+  /* width: 500px; This is bad, do not use hardcoded values! */
+}
+
+
+/* 
+Recommended button and link sizes for mobile devices:
+- Minumum 16px (height) x 44px (width)
+- 8px - 10px margin around buttons and links
+
+Font sizes for mobile devices:
+- 16px is recommended for normal text (paragraph elements)
+
+*/
+
+
 /*
 Here are commonly used media query break points:
 
@@ -25,6 +45,28 @@ Create a simple media query that changes the background color of a webpage for e
 
 */
 /* Screen, print, speech, all */
-/* and, or, not,
-  only - e.g. '@media only screen ...'
+/* and, or, not, only - e.g. '@media only screen ...'
  */
+
+ body {
+  background-color: green;
+}
+
+ @media all and (min-width: 768px) and (max-width: 991.99px) {
+  body {
+    background-color: yellow;
+  }
+ }
+ 
+ @media all and (min-width: 992px) and (max-width: 1198.99px) {
+  body {
+    background-color: red;
+  }
+ }
+
+ @media all and (min-width: 1199px) {
+
+  body {
+    background-color: aqua;
+  }
+ }
