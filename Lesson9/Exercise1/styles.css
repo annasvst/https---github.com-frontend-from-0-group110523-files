@@ -28,39 +28,3 @@ Create a simple media query that changes the background color of a webpage for e
 /* and, or, not,
   only - e.g. '@media only screen ...'
  */
-img {
-  width: 100%;
-}
-
-
-@media all and ( max-width: 576.99px )  {
- body {
-  background-color:  #234212 ;
-  
- }
-}
-
-@media all and (min-width: 577px) and (max-width: 767.99px) {
-  body {
-   background-color:  aqua ;
-  }
- }
-
- @media all and (min-width: 768px) and (max-width: 991.99px) {
-  body {
-   background-color:  purple ;
-  }
-}
-
- @media all and (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-   background-color:  grey ;
-  }
- }
-
- @media all and (min-width: 1200px){
-  body {
-   background-color:  bisque ;
-  }
- }
-
