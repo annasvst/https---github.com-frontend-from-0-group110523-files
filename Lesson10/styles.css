@@ -1,6 +1,36 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --color-dark: #1d2124;
+  --color-light: #DFDFDF;
+  --color-blue: #007bff;
+
+  /* --color-darker - en koyu gri
+  --color-dark - koyu grid
+  --color-medium  - orta gri
+  --color-light
+  --color-lighter
+  --color-accsent yada --color-primary
+  --color--warn
+  --color-danger */
+
+  --min-button-width: 44px;
+  --max-button-width: 100px;
+
+  --margin-small: 4px;
+  --margin-medium: 8px;
+  --margin-large: 16px;
+
+  --padding-small:  4px;
+
+ --border-radius: 5px;
+
+ --border-normal: 1px;
+ --border-thin: 0.5px;
+ --border-wide: 2px;
+}
+/* Example: Padding, margin, ve font icin sadece x/4: 4,8,12,16,20,24,*/
 
 body {
   margin:0;
@@ -13,8 +43,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: solid 1px #DFDFDF;
-  padding: 16px 24px;
+  border-bottom: solid 1px var(--color-light);
+  padding: var(--margin-medium) var(--margin-large);
   margin-bottom: 16px;
   box-shadow: 0px 2px 10px #a2a0a04c;
 }
@@ -30,7 +60,7 @@ body {
   display: flex;
   align-items: center;
   list-style-type: none;
-  color: #1d2124;
+  color: var(--color-dark);
   font-size: 16px;
 }
 
@@ -38,13 +68,13 @@ body {
   display: flex;
   align-items: center;
   list-style-type: none;
-  color: #1d2124;
+  color: var(--color-dark);
   font-size: 16px;
 }
 
 .list-item {
   padding: 12px;
-  color: #1d2124;
+  color: var(--color-dark);
 }
 
 .logo {
@@ -70,16 +100,16 @@ body {
 
 
 .signup-button {
-  color: #007BFF;
+  color: var(--color-blue);
   padding: 7px 12px;
-  border: 1px solid #007BFF;
+  border: 1px solid var(--color-blue);
   border-radius: 5px;
   white-space: nowrap;
 }
 
 .signup-button:hover {
   color: #ffffff !important;
-  background-color: #007BFF;
+  background-color: var(--color-blue);
   transition: 0.3s;
 }
 
@@ -118,7 +148,7 @@ body {
 }
 
 .card {
-  border: 1px solid #DFDFDF;
+  border: 1px solid var(--color-light);
   text-align: center;
   flex: 1;
   margin: 20px;
@@ -131,8 +161,7 @@ body {
 }
 
 .subscription-type {
-
-  border-bottom: 1px solid #DFDFDF;
+  border-bottom: 1px solid var(--color-light);
   margin: 0;
   padding: 10px 0;
   background-color: #F7F7F7;
@@ -168,16 +197,16 @@ body {
 }
 
 .pb-white {
-  color: #007BFF;
+  color: var(--color-blue);
   background-color: #ffffff;
-  border: 1px solid #007BFF;
+  border: 1px solid var(--color-blue);
 
 }
 
 .pb-blue {
   color: #ffffff;
-  border: 1px solid #007BFF;
-  background-color: #007BFF;
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
 }
 
 .price-button {
@@ -193,12 +222,12 @@ body {
 
 
 .pb-white:visited {
-  color: #007BFF;
+  color: var(--color-blue);
 
 }
 
 .pb-white:hover {
-  background-color: #007BFF;
+  background-color: var(--color-blue);
   color: #ffffff;
   transition: 0.3s;
 }
@@ -211,7 +240,7 @@ body {
 }
 
 .pb-blue:hover {
-  background-color: #007BFF;
+  background-color: var(--color-blue);
   color: #ffffff;
   transition: 0.3s;
 }
@@ -221,7 +250,7 @@ body {
   justify-content: center;
   margin: 50px 10px;
   border: 20px 10px;
-  border-top: 1px solid #DFDFDF;
+  border-top: 1px solid var(--color-light);
 }
 
 .bottom-list {
