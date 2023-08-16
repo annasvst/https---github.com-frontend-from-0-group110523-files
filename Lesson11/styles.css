@@ -1,3 +1,28 @@
+/* 
+BEM - block - element - modifier
+
+block - navigation (navbar), header, footer, menu, 
+
+element - button, link, paragraph, heading...
+
+modifier - focused, primary, hidden, small, large
+
+.block__element--modifier {
+}
+
+.block {} //e.g. navigaton
+
+.element {} // e.g. button
+
+.block--modifier // card--small
+
+.element--modifier // button--primary
+
+.block__element // navigation__link
+
+*/
+
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +36,22 @@ body {
   margin:0;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+.link {
+  text-decoration: none;
+}
+
+/* Butun linkeler icin ugun styles */
+.link:hover {
+
+}
+/* Sadece navbar'da olan logo link icin ugun styles */
+.navbar__logo 
+
+.text--left {
+  text-align: left;
+}
+
 
 .navbar {
   height: 70px;

@@ -15,31 +15,33 @@
   <script src="https://kit.fontawesome.com/5e08b15075.js" crossorigin="anonymous"></script>
 </head>
 
+<!-- block__element--modifier -->
+
 <body>
   <nav class="navbar">
-    <div class="left"><a href="#" class="logo link">Company name</a></div>
-    <div class="right">
-      <ul class="list">
-        <li class="list-item"><a href="#" class="menu-link link features-button">Features</a></li>
-        <li class="list-item"><a href="#" class="menu-link link enterprise-button">Enterprise</a></li>
-        <li class="list-item"><a href="#" class="menu-link link support-button">Sup</a></li>
-        <li class="list-item"><a href="#" class="menu-link link pricing-button">Pricing</a></li>
-        <li class="list-item"><a href="#" class="menu-link link signup-button">Sign up</a></li>
+    <div class="navbar--left"><a href="#" class="navbar__logo link">Company name</a></div>
+    <div class="navbar--right">
+      <ul class="navbar__list text--left">
+        <li class="navbar__list__item"><a href="#" class="navbar__link link">Features</a></li>
+        <li class="navbar__list__item"><a href="#" class="navbar__link link">Enterprise</a></li>
+        <li class="navbar__list__item"><a href="#" class="navbar__link link">Sup</a></li>
+        <li class="navbar__list__item"><a href="#" class="navbar__link link">Pricing</a></li>
+        <li class="navbar__list__item"><a href="#" class="navbar__link button button--outline--primary">Sign up</a></li>
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="pricing">
-      <h1 class="pricing-header">Pricing</h1>
-      <p class="pricing-text">Quickly build an effective pricing table for your potential customers with this Bootstrap
+  <div class="main">
+    <div class="main__text-content">
+      <h1 class="main__heading heading">Pricing</h1>
+      <p class="main__text text">Quickly build an effective pricing table for your potential customers with this Bootstrap
         example. It's built
         with default Bootstrap components and utilities with little customization.</p>
     </div>
-    <div class="cards">
-      <div class="free card">
-        <h2 class="subscription-type">Free</h2>
-        <div class="price-and-text">
-          <h3 class="subscription-price"><span class="dollar">$0 </span><span class="month">/ mo</span></h3>
+    <div class="main__cards">
+      <div class="main__card card"> 
+        <h2 class="card__heading">Free</h2>
+        <div class="card__content">
+          <h3 class="card__content__heading"><span class="dollar">$0 </span><span class="month">/ mo</span></h3>
           <ul class="card-list">
             <li class="card-text">10 users included</li>
             <li class="card-text">2 GB of storage</li>
