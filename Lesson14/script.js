@@ -20,6 +20,7 @@ const phrase = 'Hello, world!';
 
 console.log(`${phrase} My name is ${myName}. I am ${age} years old.`);
 console.log(phrase + ' My name is ' + myName + '. I am ' + age + ' years old.');
+
 console.log('------------------------');
 // 3. Declare a variable number1 and initialize it to 10.
 const number1 = 10;
