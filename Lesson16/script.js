@@ -26,7 +26,7 @@ const greet = () => {
 
 greet();
 */
-// IEFF - @Anna to check the name
+// IIFE (Immediately Invoked Function Expression)
 (function multiplyTwoNumbers(parameter1, parameter2) {
 	console.log('Hello');
 	return parameter1 * parameter2;
