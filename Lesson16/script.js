@@ -6,7 +6,7 @@ Functions are one of the fundamental building blocks of the language. They are r
 Function Declaration
 function (parameter1, parameter2) {
   return parameter1 * parameter2;
-}
+};
 
 Named function:
 function multiplyTwoNumbers(parameter1, parameter2) {
@@ -19,18 +19,20 @@ const sumOfTwoNumber = function (parameter1, parameter2) {
   return parameter1 * parameter2;
 };
 
-Arrow Function (introduced in ECMAScript 6)
+Arrow Function (introduced in ECMAScript 6 OR ES6)
 const greet = () => {
   console.log('Hello world');
 };
 
 greet();
 */
-
-function multiplyTwoNumbers(parameter1, parameter2) {
+// IEFF - @Anna to check the name
+(function multiplyTwoNumbers(parameter1, parameter2) {
+	console.log('Hello');
 	return parameter1 * parameter2;
-}
-console.log(multiplyTwoNumbers(1, 4));
+})();
+
+// console.log(multiplyTwoNumbers(1, 4));
 
 /* 
 Conditional statements (if...else, switch)
@@ -41,6 +43,8 @@ if Statement
 if (condition) {
 
 }
+// Same line if condition:
+if (today === 'Wednessday') console.log('Join the lesson');
 
 if ... else Statement
 if (condition) {
@@ -67,16 +71,96 @@ switch (day) {
 */
 
 // 1. Write a program that takes in a number and checks if it's even or odd using if else statement.
+function isEvenOrOdd(number) {
+	if (number % 2 === 0) {
+		console.log(number + ' is even');
+	} else {
+		console.log(number + ' is odd');
+	}
+}
+isEvenOrOdd(9);
+isEvenOrOdd(16);
 
 // 2. Write a program that takes age as input. If the age is less than 18, print "Sorry, you are not old enough to vote". If the age is between 18 and 65 (inclusive), print "You are eligible to vote". If the age is greater than 65, print "You are a senior citizen".
 
+function isAllowedToVote(age) {
+	if (age < 18) {
+		console.log('Sorry, you are not old enough to vote');
+	} else if (age >= 18 && age <= 65) {
+		console.log('You are eligible to vote');
+	} else {
+		console.log('You are a senior citizen');
+	}
+}
+isAllowedToVote(14);
+isAllowedToVote(30);
+isAllowedToVote(70);
+isAllowedToVote(18);
+isAllowedToVote(65);
+
 // 3. Write a program that asks the user to enter two numbers and checks if the first number is greater than, less than, or equal to the second number using if else statement.
+function compareNumbers(firstNumber, secondNumber) {
+	if (firstNumber > secondNumber) {
+		console.log(
+			'The first number ' +
+				firstNumber +
+				' is bigger than second number ' +
+				secondNumber
+		);
+	} else if (firstNumber === secondNumber) {
+		console.log(
+			'The first number ' +
+				firstNumber +
+				' is equal to second number ' +
+				secondNumber
+		);
+	} else {
+		console.log(
+			'The first number ' +
+				firstNumber +
+				' is smaller than second number ' +
+				secondNumber
+		);
+	}
+}
+
+compareNumbers(5, 7);
+compareNumbers(10, 10);
+compareNumbers(7, 5);
 
 // 4. Write a program that takes in a string and checks if the first letter is uppercase using if else statement.
 
+function isFirstLetterUppercase(sentence) {
+	if (sentence[0] === sentence[0].toUpperCase()) {
+		console.log(
+			'The first letter of the sentence is uppercase. Sentence: ' + sentence
+		);
+	} else {
+		console.log(
+			'The first letter of the sentence is not uppercase. Sentence: ' + sentence
+		);
+	}
+}
+isFirstLetterUppercase(
+	'Write a program that takes in a string and checks if the first letter is uppercase using if else statement.'
+);
+isFirstLetterUppercase(
+	'write a program that takes in a string and checks if the first letter is uppercase using if else statement.'
+);
 
 // 5. Write a program that takes in a number and checks if it's positive, negative, or zero using if else statement.
-
+function isPositiveNegativeZero(numberToCheck) {
+	if (numberToCheck > 0) {
+		console.log('Number is positive. Number: ' + numberToCheck);
+	} else if (numberToCheck < 0) {
+		console.log('Number is negative. Number: ' + numberToCheck);
+	} else {
+		console.log('Number is zero. Number: ' + numberToCheck);
+	}
+}
+isPositiveNegativeZero(5);
+isPositiveNegativeZero(-15);
+isPositiveNegativeZero(0);
 // 6. Write a program that takes in a year and checks if it's a leap year (is divisible by 4 and not divisible by 100 OR divisible by 400) or not using if else statement.
 
 // 7. Write a program that takes in a temperature and checks if it's above or below freezing using if else statement.
@@ -100,5 +184,41 @@ switch (day) {
 // 13. Write a program that asks the user to enter a month number (1-12) and displays the corresponding season name. Use a switch statement to handle the different cases.
 
 // 14. Write a program that asks the user to enter a grade letter (A, B, C, D, or F) and displays a message indicating whether the grade is passing (A, B, C) or failing (D, F). Use a switch statement to handle the different cases.
+
+function checkGrade(grade) {
+  const uppercaseGrade = grade.toUpperCase();
+	switch (uppercaseGrade) {
+		case 'A':
+		case 'B':
+		case 'C':
+			console.log(uppercaseGrade + ' Passing');
+			break;
+		case 'D':
+		case 'F':
+			console.log(uppercaseGrade + ' Failing');
+			break;
+		default:
+			console.log('Input value is not correct');
+			break;
+	}
+}
+checkGrade("a");
+checkGrade("D");
+checkGrade("Z");
+checkGrade("A--");
+checkGrade("B+");
+
+// switch (day) {
+//   case 'Monday':  // this means that day === 'Monday'
+//    console.log('It\'s Monday');
+//    break;
+//   case 'Tuesday':
+//     console.log('It\'s Tuesday');
+//     break; // Use break key word if you don't use return key word in the statement;
+//     .... cases for other days of the week
+//   default:
+//     console.log('Unknow day');
+//     break;
+// }
 
 // 15. Write a program that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
