@@ -166,7 +166,7 @@ const coordinates = [10, 20, 30];
 const x = coordinates[0];
 const y = coordinates[1];
 const z = coordinates[2];
-const [x1, y1, z1] = coordinates;
+const [x1, y1, z1] = coordinates; // Square brakets ([]) should be used for destructuring arrays, curly brackets ({}) should be used for destructuring objects
 
 console.log('Ex13', coordinates);
 console.log('Ex13', y, y1);
