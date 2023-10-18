@@ -13,7 +13,7 @@
 // Factorial of 5 is 5*4*3*2*1
 function getFactorial(number) {
 	if (number < 0 || typeof number !== 'number') {
-		console.log('Please provide a number >= 0');
+		console.error('Please provide a number >= 0');
 		return;
 	} else {
 		if (number === 0) {
@@ -31,25 +31,60 @@ getFactorial(5)
   5 * 4 * 3 * 2 * getFactorial(1)
   5 * 4 * 3 * 2 * 1 * getFactorial(0)
   5 * 4 * 3 * 2 * 1 * 1
-  
 */
 console.log('5', getFactorial(5));
 console.log('-26', getFactorial(-26));
 console.log('String', getFactorial('sadasfasd'));
 
 // 1. Write a recursive function to print out all the elements of an array.
-const arr = [1, 2, 3, 4, 5];
-
+const arrEx1 = [1, 2, 3, 4, 5];
+function printingOutOneOfTheElements(arr) {
+	if(arr.length == 0){
+		return;
+	} else {
+		console.log(arr[0]); // prints 1
+		return printingOutOneOfTheElements(arr.slice(1)); // printingOutOneOfTheElements([2,3,4,5]);
+	}
+};
+printingOutOneOfTheElements(arrEx1);
 
 // 2. Write a recursive function to capitalize the first letter of each word in a sentence.
 const ex2sentence =
-	'a recursive function to capitalize the first letter of each word in a sentence.  ';
+	'a recursive function to capitalize the first letter of each word in a sentence.';
+
+function capitalizeFirstLetter (sentence) {
+	const sentenceArray = sentence.split(' ');
+	if(sentenceArray.length === 0 || sentenceArray[0].length === 0) {
+		return '';
+	}
+	else {
+		const firstWord = sentenceArray[0];
+		const firstWordCapitalized = firstWord[0].toUpperCase() + firstWord.slice(1);
+		const restOfTheSentenceArray = sentenceArray.slice(1);
+		const restOfTheSentence = restOfTheSentenceArray.join(' ');
+		return firstWordCapitalized + ' ' + capitalizeFirstLetter(restOfTheSentence) ;
+	} 
+}
+
+console.log(capitalizeFirstLetter(ex2sentence));
 
 
 // 3. Write a recursive function to count the number of vowels in a string.
 const sentenceEx4 = 'Hello, how are you?';
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 
+function vowelsInString(sentence){
+	if (sentence.length === 0){ 
+		return 0;
+	} else {
+		if(vowels.includes(sentence[0].toLowerCase())){
+			return 1 + vowelsInString(sentence.slice(1));
+		} else {
+			return vowelsInString(sentence.slice(1));
+		}
+	}
+}
+console.log(vowelsInString(sentenceEx4));
 // 4. Write a recursive function to remove all occurrences of a specified character from a string.
 const sentenceEx5 = 'Hello, how are you?';
 const charToRemove = 'o';
