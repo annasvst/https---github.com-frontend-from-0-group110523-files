@@ -46,7 +46,19 @@ const ex2sentence =
 	'a recursive function to capitalize the first letter of each word in a sentence.  ';
 
 
-// 3. Write a recursive function to flatten an object with nested objects into a single-level object.
+// 3. Write a recursive function to count the number of vowels in a string.
+const sentenceEx4 = 'Hello, how are you?';
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+// 4. Write a recursive function to remove all occurrences of a specified character from a string.
+const sentenceEx5 = 'Hello, how are you?';
+const charToRemove = 'o';
+
+// 5. Write a recursive function to check if an array includes a specific value.
+const numbers = [1, 2, 3, 4, 5];
+const valueToCheck = 3;
+
+// 6. Write a recursive function to flatten an object with nested objects into a single-level object.
 const nestedObj = {
 	name: 'John',
 	age: 30,
@@ -61,17 +73,6 @@ const nestedObj = {
 		linkedIn: 'johndoe',
 	},
 };
-// 4. Write a recursive function to count the number of vowels in a string.
-const sentenceEx4 = 'Hello, how are you?';
-const vowels = ['a', 'e', 'i', 'o', 'u'];
-
-// 5. Write a recursive function to remove all occurrences of a specified character from a string.
-const sentenceEx5 = 'Hello, how are you?';
-const charToRemove = 'o';
-
-// 6. Write a recursive function to check if an array includes a specific value.
-const numbers = [1, 2, 3, 4, 5];
-const valueToCheck = 3;
 
 // 7. Write a recursive function to find the maximum depth of a nested object.
 const nestedObjEx7 = {
