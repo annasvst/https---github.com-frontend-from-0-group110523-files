@@ -1,0 +1,8 @@
+.button {
+  background-color: #bbb;
+  border-radius: 5px;
+}
+
+.button--hidden {
+  display: none;
+}
