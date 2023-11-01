@@ -33,7 +33,7 @@ The `DOM (Document Object Model)` is a programming interface for web documents.
 ```const elementsByQueryAll = document.querySelectorAll("CSS selector");```
 
 
-6. getElementByName - returns a collection of elements with a specific name attribute (typically used with form elements when an element has "name" atrribute).
+6. getElementsByName - returns a collection of elements with a specific name attribute (typically used with form elements when an element has "name" atrribute).
 
 ```const elementsByName = document.getElementsByName("elementName");```
 
