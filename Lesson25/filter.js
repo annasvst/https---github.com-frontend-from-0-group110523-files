@@ -2,7 +2,10 @@
 // Given an array of numbers, filter out the even numbers.
 const numbersExercise1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+const onlyOddNumber = numbersExercise1.filter((number) => number % 2 !== 0);
 
+console.log('numbersExercise1', numbersExercise1);
+console.log('onlyOddNumber', onlyOddNumber);
 // Exercise 2:
 // Given an array of strings, filter out the strings that contain the letter "a".
 const wordsExercise2 = [
@@ -18,10 +21,12 @@ const wordsExercise2 = [
 	'jungle',
 ];
 
+const wordsResult = wordsExercise2.filter((word) => !word.includes('a'));
+console.log('wordsResult', wordsResult);
 
 // Exercise 3:
 // Given an array of objects representing books, filter out the books with a price less than $10.
-const booksExercise9 = [
+const booksExercise3 = [
 	{
 		title: 'To Kill a Mockingbird',
 		author: 'Harper Lee',
@@ -83,7 +88,8 @@ const booksExercise9 = [
 		price: 9.99,
 	},
 ];
-
+const booksFiltered = booksExercise3.filter(book => book.price >= 10);
+console.log ('booksFiltered', booksFiltered);
 
 // Exercise 4:
 // Given an array of user objects, filter out the users who are below 25 years old.

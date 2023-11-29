@@ -15,6 +15,22 @@
 // Calculate the sum of all numbers in the given array.
 const numbersEx1 = [1, 2, 3, 4, 5];
 
+// numbersEx1.reduce((accumulator, currentValue, currentIndex, array) => {
+//   console.log('accumulator', accumulator);
+//   console.log('currentValue', currentValue);
+//   console.log('currentIndex', currentIndex);
+//   console.log('array', array);
+// }, 0);
+
+const ex1Result = numbersEx1.reduce((accumulator, currentValue) => {
+  console.log(accumulator, currentValue);
+  return accumulator + currentValue;
+});
+
+
+console.log('ex1Result', ex1Result);
+
+
 
 // Exercise 2:
 // Find the maximum value in the given array. (Hint: Use -Infinity to compare values to)

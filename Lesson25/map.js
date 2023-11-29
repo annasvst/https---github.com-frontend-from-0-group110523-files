@@ -13,6 +13,8 @@ const wordsExercise1 = [
 	'jungle',
 ];
 
+const upperCaseWords = wordsExercise1.map(word => word.toUpperCase());
+console.log("upperCaseWords", upperCaseWords);
 
 
 // Exercise 2:
