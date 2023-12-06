@@ -31,7 +31,6 @@ Async/Await:
 - It allows for asynchronous communication between the client and server.
 */
 
-
 /* API requests: Fetch API
 The Fetch API is a modern JavaScript API that provides an interface for making network requests, typically for retrieving resources from a server. It offers a more powerful and flexible alternative to the older XMLHttpRequest (XHR) object for making HTTP requests.
 
@@ -80,27 +79,29 @@ fetch('https://api.example.com/data', {
 */
 const API_KEY = 'qCnxm3oi9NS9mzAkGmh7_4B6V3p6DJnyFs_wKfNQFF4';
 
-fetch(`https://api.unsplash.com/photos/random?count=10&client_id=${API_KEY}`)
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.log(error));
+fetch(`https://api.unsplash.com/photos/random?count=1&client_id=${API_KEY}`)
+	.then((response) => response.json())
+	.then((data) => {
+		console.log(data);
+		return data;
+	})
+	.then((data2) => console.log(data2[0].id))
+	.catch((error) => console.log(error));
 
+// // Same code using AJAX
+// const xhr = new XMLHttpRequest();
+// const url = `https://api.unsplash.com/photos/random?count=10&client_id=${API_KEY}`;
 
-// Same code using AJAX
-const xhr = new XMLHttpRequest();
-const url = `https://api.unsplash.com/photos/random?count=10&client_id=${API_KEY}`;
+// xhr.onreadystatechange = function () {
+// 	if (xhr.readyState === 4) {
+// 		if (xhr.status === 200) {
+// 			const data = JSON.parse(xhr.responseText);
+// 			console.log(data);
+// 		} else {
+// 			console.log('Error:', xhr.status, xhr.statusText);
+// 		}
+// 	}
+// };
 
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-    if (xhr.status === 200) {
-      const data = JSON.parse(xhr.responseText);
-      console.log(data);
-    } else {
-      console.log('Error:', xhr.status, xhr.statusText);
-    }
-  }
-};
-
-xhr.open('GET', url, true);
-xhr.send();
-
+// xhr.open('GET', url, true);
+// xhr.send();
