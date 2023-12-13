@@ -7,12 +7,12 @@
 <body>
   <div class="container">
     <h1>Posts</h1>
-    <button id="fetch-button" class="button button--success">Fetch posts</button>
+    <button id="fetch-button" onclick="getPosts()" class="button button--success">Fetch posts</button>
     <button id="fetch-one-button" class="button button--success">Fetch a post</button>
-    <button id="create-button" class="button button--success">Create post</button>
-    <button id="update-button" class="button button--success">Update post</button>
-    <button id="delete-button" class="button button--success">Delete post</button>
+    <a href="./create-post.html" id="create-button" class="button button--success">Create post</a>
+    <button id="delete-button" class="button button--success">Clear posts</button>
   </div>
+  <ul id="post-container"></ul>
 
   <script src="script.js"></script>
 </body>
