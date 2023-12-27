@@ -99,17 +99,17 @@ getFirstResult();
 
 // Function expression
 // TODO: Anna to check what error case is not handled
-// const allPromisesResult = async function () {
-//   try {
-//     const success = await(allPromises);
-//     console.log('allPromisesResult function: ', success);
-//   } catch(error) {
-//     console.log(error);
-//   } finally {
-//     console.log('Final code block!');
-//   }
-// }
+const allPromisesResult = async function () {
+  try {
+    const success = await(allPromises);
+    console.log('allPromisesResult function: ', success);
+  } catch(error) {
+    console.log(error);
+  } finally {
+    console.log('Final code block!');
+  }
+}
 
-// allPromisesResult();
+allPromisesResult();
 
 // Try, catch, finally
