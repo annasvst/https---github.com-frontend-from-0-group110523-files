@@ -1,12 +1,16 @@
-import { useState } from "react"
+import { useContext, useState } from "react";
+import {UserContext} from '../../UserContext';
 import './styles.css';
 
-export const UserDetailsForm = ({incomingUsername}) => {
-  const [username, setUsername] = useState(incomingUsername);
+export const UserDetailsForm = ({setUser}) => {
+  const user = useContext(UserContext);
+  
+  const [username, setUsername] = useState(user.username ? user.username : '');
 
   function handleSubmit (e) {
     e.preventDefault();
     console.log('New user name is: ', username);
+    setUser(prevState => ({isLoggedInUser : prevState.isLoggedInUser, username: username }));
   };
 
   return (

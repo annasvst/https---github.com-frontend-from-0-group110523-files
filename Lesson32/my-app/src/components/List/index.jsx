@@ -1,11 +1,8 @@
-import {useState} from 'react';
-import {todoData} from '../../data';
 import './styles.css';
 
-export const List = () => {
-	const [todos, setTodos] = useState(todoData);
-	
+export const List = ({todos, setTodos}) => {
 	function handleClick (id) {
+		console.log('Clicked on item in List component');
 		setTodos(prevState => prevState.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo));
 	};
 
