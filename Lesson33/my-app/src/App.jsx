@@ -1,20 +1,21 @@
 import { List } from './components/List';
 import { Account } from './components/Account';
 import { Navbar } from './components/Navbar';
+import { Demo } from './components/Demo';
 import { PerformanceState } from './components/PerformanceState';
-import { useContext, useState } from 'react';
-import {UserContext} from './UserContext';
+import { useState } from 'react';
+import {useUser} from './modules/user/UserProvider';
 import { todoData } from './data';
 import './App.css';
 
 export const App = () => {
 	const [todos, setTodos] = useState(todoData);
-	const user = useContext(UserContext);
+	const user = useUser();
 
 	return (
 		<div className='container'>
 			<Navbar />
-			{user.isLoggedInUser ? <Account /> : <></> }
+			{user.isLoggedInUser ? <Account /> : <></>}
 			<div className='app'>
 				<List todos={todos} setTodos={setTodos} />
 			</div>

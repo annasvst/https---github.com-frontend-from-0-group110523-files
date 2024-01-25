@@ -16,3 +16,12 @@
 .navigation-list > li:hover {
   cursor: pointer;
 }
+
+.navigation-list > li > button {
+  border: none;
+  background-color: inherit;
+  min-width: 48px;
+  padding: 0 10px;
+  font-size: inherit;
+}
+

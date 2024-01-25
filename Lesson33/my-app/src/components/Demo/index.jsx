@@ -1,7 +1,9 @@
-import {Title} from '../Title';
 
-export const Demo = ({title}) => {
+export const Demo = ({title, children}) => {
   return (
-    <Title title={title} />
+    <div>
+      <h1>{title}</h1>
+      {children}
+    </div>
   );
 };

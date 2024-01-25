@@ -1,10 +1,12 @@
+import { USER_ACTIONS, useUser, useUserDispatch } from '../../modules/user/UserProvider';
 import './styles.css';
-import {UserContext} from '../../UserContext';
-import { useContext } from 'react';
 
 export const Navbar = () => {
-  const user = useContext(UserContext);
-  
+	const user = useUser();
+	// const user = useContext(UserContext);
+	const dispatch = useUserDispatch();
+	// const dispatch = useContext(UserDispatchContext);
+
 	return (
 		<nav className='navigation'>
 			<ul className='navigation-list'>
@@ -12,10 +14,16 @@ export const Navbar = () => {
 				{user.isLoggedInUser ? (
 					<>
 						<li>Account</li>
-            <li>Log out</li>
+						<li>
+							<button onClick={() => dispatch({ type: USER_ACTIONS.logOut })}>
+								Log out
+							</button>
+						</li>
 					</>
 				) : (
-					<li>Log in</li>
+					<li>
+						<button onClick={() => dispatch({ type: USER_ACTIONS.logIn })}>Log in</button>
+					</li>
 				)}
 			</ul>
 		</nav>

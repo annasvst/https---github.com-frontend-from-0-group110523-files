@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
-import {UserContext} from './UserContext';
-import {loggedInUser} from './UserContext';
+import {UserProvider, loggedOutUser} from './modules/user/UserProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserContext.Provider value={loggedInUser}>
+    <UserProvider initialState={loggedOutUser}>
       <App />
-    </UserContext.Provider>
+    </UserProvider>
   </React.StrictMode>
 );
 
