@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Search } from './modules/recipes/SearchBar';
 import {Card} from './components/Card';
+import {RegistrationForm} from "./modules/user/RegistrationForm";
 import './App.css';
 
 export const App = () => {
@@ -17,8 +17,9 @@ export const App = () => {
 
 	return (
 		<Card>
-      <Search setRecipes={setRecipes}/>
-			<ul className='recipes__list'>{recipes.map((recipe => <li key={recipe.idMeal} >{recipe.strMeal}</li>))}</ul>
+			<RegistrationForm />
+      {/* <Search setRecipes={setRecipes}/>
+			<ul className='recipes__list'>{recipes.map((recipe => <li key={recipe.idMeal} >{recipe.strMeal}</li>))}</ul> */}
 		</Card>
 	);
 };

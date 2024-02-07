@@ -7,7 +7,7 @@ Using controlled components for forms in React helps ensure that your component'
 
 
 # Controlled Components
-A controlled component in React is a *form element* (like input, textarea, or select) that is **controlled by the state of a React component**. This means that the value of the form element is stored in the component's state and is updated using state updates. *The component's state becomes the single source of truth for the input's value*, making it easy to manage and manipulate the form data. For the example, see the LoginForm component in the `/my-app/src/components` directory.
+A controlled component in React is a *form element* (like input, textarea, or select) that is **controlled by the state of a React component**. This means that the value of the form element is stored in the component's state and is updated using state updates. *The component's state becomes the single source of truth for the input's value*, making it easy to manage and manipulate the form data.
 
 To create a controlled component, you follow these steps:
 
