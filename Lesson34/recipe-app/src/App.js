@@ -11,7 +11,8 @@ export const App = () => {
 			'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 		fetch(DB_URL)
 			.then((data) => data.json())
-			.then((recipeData) => setRecipes(recipeData.meals));
+			.then((recipeData) => 
+			setRecipes(recipeData.meals));
 	}, []);
 
   useEffect(() => {

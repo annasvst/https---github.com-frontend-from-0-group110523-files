@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {App} from './App';
+import {RecipesProvider} from './modules/recipes/RecipesProvider';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RecipesProvider initialState={[]}>
+      <App />
+    </RecipesProvider>
   </React.StrictMode>
 );
 
