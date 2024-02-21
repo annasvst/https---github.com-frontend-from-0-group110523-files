@@ -4,13 +4,17 @@ import './index.css';
 import {App} from './App';
 import {RecipesProvider} from './modules/recipes/RecipesProvider';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RecipesProvider initialState={[]}>
-      <App />
-    </RecipesProvider>
+    <BrowserRouter>
+      <RecipesProvider initialState={[]}>
+        <App />
+      </RecipesProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

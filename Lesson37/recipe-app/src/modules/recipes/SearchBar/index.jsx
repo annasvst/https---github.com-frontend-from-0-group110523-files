@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
 
-export const Search = ({ setRecipes }) => {
+export const SearchBar = ({ setRecipes }) => {
 	const [mainIngredient, setMainIngredient] = useState('');
 	const [inputError, setInputError] = useState(undefined);
 	const [searchError, setSearchError] = useState(undefined);

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import {Card} from './components/Card';
-import {Search} from "./modules/recipes/SearchBar";
 import './App.css';
-import { NewRecipe } from './modules/recipes/NewRecipe';
+import { AppRouter } from './AppRouter';
 
 export const App = () => {
 	const [recipes, setRecipes] = useState([]);
@@ -18,9 +17,7 @@ export const App = () => {
 
 	return (
 		<Card>
-			<NewRecipe />
-      <Search setRecipes={setRecipes}/>
-			<ul className='recipes__list'>{recipes.map((recipe => <li key={recipe.idMeal} >{recipe.strMeal}</li>))}</ul>
+			<AppRouter recipes={recipes} setRecipes={setRecipes} />
 		</Card>
 	);
 };
