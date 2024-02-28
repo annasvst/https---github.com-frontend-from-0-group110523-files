@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './styles.css';
+import TextField from '@mui/material/TextField';
 
 export const SearchBar = ({ setRecipes }) => {
 	const [mainIngredient, setMainIngredient] = useState('');
@@ -42,20 +42,19 @@ export const SearchBar = ({ setRecipes }) => {
 
 	return (
 		<>
-			<form onSubmit={handleSubmit} className='search-bar'>
-				<label htmlFor='main-ingredient'>Search meal by main ingredient</label>
-				<div>
-					<input
-						type='text'
-						name='main-ingredient'
-						id='main-ingredient'
-						placeholder='chicken breast'
-						onChange={(event) => setMainIngredient(event.target.value)}
-						className='search-bar__input'
-					/>
-					<button type='submit'>Search</button>
-				</div>
-				{inputError && <span>{inputError}</span>}
+			<form onSubmit={handleSubmit}>
+				<TextField
+					label='Search for an ingredient...'
+					variant='standard'
+					type='text'
+					name='main-ingredient'
+					id='main-ingredient'
+					placeholder='Chicken'
+					onChange={(event) => setMainIngredient(event.target.value)}
+					error={!!inputError}
+					helperText={inputError}
+					fullWidth
+				/>
 			</form>
 			{searchError && <p>{searchError}</p>}
 		</>

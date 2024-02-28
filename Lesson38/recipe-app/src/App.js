@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import {Card} from './components/Card';
-import './App.css';
+import {Container} from '@mui/material';
 import { AppRouter } from './AppRouter';
 
 export const App = () => {
@@ -16,8 +15,9 @@ export const App = () => {
 	}, []);
 
 	return (
-		<Card>
+		// Replaced our own Card component with Container compontn and restricted it's width to "md" value (900px) so that on large screen the content does not spread too wide. 
+		<Container maxWidth='md'>
 			<AppRouter recipes={recipes} setRecipes={setRecipes} />
-		</Card>
+		</Container>
 	);
 };

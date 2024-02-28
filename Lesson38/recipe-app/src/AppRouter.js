@@ -7,6 +7,7 @@ import { SearchBar } from './modules/recipes/SearchBar';
 import {RecipeList} from './modules/recipes/RecipeList';
 import {RecipeDetails} from './modules/recipes/RecipeDetails';
 import {Navigate} from 'react-router-dom';
+import { Grid } from '@mui/material';
 
 export const AppRouter = ({recipes , setRecipes}) => {
 	return (
@@ -34,14 +35,20 @@ export const AppRouter = ({recipes , setRecipes}) => {
         <Route index element={<Navigate to="/" replace={true} />} />
       </Route>
 
-			
 			<Route
 				path='/'
 				element={
-					<>
-						<SearchBar setRecipes={setRecipes} />
-						<RecipeList recipes={recipes} />
-					</>
+					<Grid container rowSpacing={4} component='main'>
+            {/* Added empty Grid items around the SearchBar element to center it on the md or larger screens */}
+            <Grid item xs={0} md={3}/>
+            <Grid item xs={12} md={6}>
+              <SearchBar setRecipes={setRecipes} />
+            </Grid>
+            <Grid item xs={0} md={3}/>
+            <Grid item xs={12}>
+              <RecipeList recipes={recipes} />
+            </Grid>
+					</Grid>
 				}
 			/>
 		</Routes>

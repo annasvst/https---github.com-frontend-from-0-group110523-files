@@ -1,9 +1,0 @@
-.search-bar {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.search-bar__input {
-  width: 50%;
-}

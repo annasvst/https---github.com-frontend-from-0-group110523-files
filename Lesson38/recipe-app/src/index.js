@@ -5,6 +5,8 @@ import {App} from './App';
 import {RecipesProvider} from './modules/recipes/RecipesProvider';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from '@mui/material/styles';
+import {theme} from './AppTheme';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <RecipesProvider initialState={[]}>
-        <App />
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </RecipesProvider>
     </BrowserRouter>
   </React.StrictMode>
