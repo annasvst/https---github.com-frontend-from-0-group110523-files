@@ -1,0 +1,10 @@
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.error-message {
+  color: #850404;
+  font-size: 14px;
+}
