@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import {Container} from '@mui/material';
 import { AppRouter } from './AppRouter';
+import { Recipe } from './modules/recipes/models';
 
 export const App = () => {
-	const [recipes, setRecipes] = useState([]);
+	const [recipes, setRecipes] = useState<Recipe[]>([]);
 
 	useEffect(() => {
 		const DB_URL =

@@ -1,5 +1,6 @@
 // The string type is used for textual data. It's similar to strings in JavaScript.
 let firstName: string = "Alice";
+// let firstName = "Alice";
 
 // This type is used for numeric values. TypeScript does not differentiate between integers and floats - all numbers are simply number.
 const age: number = 30;
@@ -15,16 +16,20 @@ const anotherList: Array<string> = ['1', '2', '3'];
 const person: [string, number] = ["Alice", 30]; // A tuple of string and number
 
 // Enums are a way of giving more friendly names to sets of numeric values.
-enum Color {Red, Green, Blue};
+enum Color {Red, Green, Blue, Yellow};
 
-const primaryColor: Color = Color.Green;
+let primaryColor: Color = Color.Green;
+primaryColor = Color.Yellow;
 
+console.log('primaryColor', primaryColor);
 enum Weekdays {
   MO = 'Monday',
   TUE = 'Tuesday',
   WED = 'Wednesday'
   //...
 };
+
+console.log('Monday', Weekdays.MO);
 
 // The any type allows for any type of value, opting out of type-checking. Use this sparingly as it defeats the purpose of TypeScript.
 let notSure: any = 4;

@@ -17,10 +17,10 @@ const user3: AdminUser = { id: 1, name: "Jane", superAdmin: false };
 type ID = string | number;
 
 type Person = {
-    id: ID;
-    name: string;
-    age?: number;
+  id: ID;
+  name: string;
+  age?: number;
 };
 
 const person1: Person = { id: "123", name: "John" }; 
-const person2: Person = { id: 123, name: "Jane", age: 30 }; 
+const person2: Person = { id: 123, name: "Jane", age: 30 };

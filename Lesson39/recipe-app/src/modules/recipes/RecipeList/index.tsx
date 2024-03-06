@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { ListItem } from '../ListItem';
 import { Grid } from '@mui/material';
+import { Recipe } from '../models';
 
-export const RecipeList = ({ recipes }) => {
+interface RecipeListProps {
+	recipes: Recipe[];
+}
+
+export const RecipeList = ({ recipes }: RecipeListProps) => {
 	return (
 		<Grid container spacing={4}>
 			{recipes.map((recipe) => (

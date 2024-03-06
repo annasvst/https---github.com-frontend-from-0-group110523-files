@@ -8,8 +8,14 @@ import {RecipeList} from './modules/recipes/RecipeList';
 import {RecipeDetails} from './modules/recipes/RecipeDetails';
 import {Navigate} from 'react-router-dom';
 import { Grid } from '@mui/material';
+import { Recipe } from './modules/recipes/models';
 
-export const AppRouter = ({recipes , setRecipes}) => {
+interface AppRouterProps {
+  recipes: Recipe[];
+  setRecipes: any;
+}
+
+export const AppRouter = ({recipes, setRecipes}: AppRouterProps) => {
 	return (
 		<Routes>
       <Route path='user'>
