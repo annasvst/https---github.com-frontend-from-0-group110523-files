@@ -2,22 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {App} from './App';
-import {RecipesProvider} from './modules/recipes/RecipesProvider';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
 import {theme} from './AppTheme';
+import { Provider } from 'react-redux';
+import  store  from "./store";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <RecipesProvider initialState={[]}>
+      <Provider store={store}>
         <ThemeProvider theme={theme}>
           <App />
         </ThemeProvider>
-      </RecipesProvider>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -9,7 +9,7 @@ export const RecipesContext = createContext();
 export const RecipesDispatchContext = createContext();
 
 export const RecipesProvider = ({children, initialState}) => {
-	const [recipes, dispatch] = useReducer(userReducer, initialState ?? {});
+	const [recipes, dispatch] = useReducer(userReducer, initialState ?? []);
 
 	return (
 		<RecipesContext.Provider value={recipes}>
@@ -19,6 +19,7 @@ export const RecipesProvider = ({children, initialState}) => {
 		</RecipesContext.Provider>
 	)
 };
+
 
 function userReducer (state, action) {
 	switch (action.type) {

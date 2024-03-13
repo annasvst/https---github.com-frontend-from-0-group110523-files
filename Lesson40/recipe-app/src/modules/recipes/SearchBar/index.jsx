@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
+import { useDispatch } from 'react-redux';
+import { updateRecipes } from '../recipesSlice';
 
-export const SearchBar = ({ setRecipes }) => {
+export const SearchBar = () => {
+	const dispatch = useDispatch();
 	const [mainIngredient, setMainIngredient] = useState('');
 	const [inputError, setInputError] = useState(undefined);
 	const [searchError, setSearchError] = useState(undefined);
@@ -16,7 +19,7 @@ export const SearchBar = ({ setRecipes }) => {
 			.then((res) => res.json())
 			.then((data) => {
 				if (data.meals && data.meals.length > 0) {
-					setRecipes(data.meals);
+					dispatch(updateRecipes(data.meals));
 					setSearchError(null);
 				} else {
 					setSearchError(

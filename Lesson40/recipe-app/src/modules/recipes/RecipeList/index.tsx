@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { ListItem } from '../ListItem';
 import { Grid } from '@mui/material';
 import { Recipe } from '../models';
+import { useSelector } from 'react-redux';
 
-interface RecipeListProps {
-	recipes: Recipe[];
-}
 
-export const RecipeList = ({ recipes }: RecipeListProps) => {
+export const RecipeList = () => {
+	const recipes = useSelector((state: {recipes:Recipe[]}) => state.recipes);
+
 	return (
 		<Grid container spacing={4}>
 			{recipes.map((recipe) => (
