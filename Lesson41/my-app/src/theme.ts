@@ -5,4 +5,5 @@ export const theme: Theme = createTheme({
 	palette: {
 		primary: { main: blueGrey[500] },
 	},
+	spacing: 4,
 });
