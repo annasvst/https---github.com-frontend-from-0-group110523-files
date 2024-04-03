@@ -9,7 +9,7 @@
 
 - Performance Testing: Consider tools like Lighthouse or WebPagetest to assess your application's performance. Performance is a crucial aspect of user experience.
 
-- Accessibility Testing: Use tools like Axe or react-a11y for accessibility testing. Ensuring your app is accessible to all users is essential.
+- Accessibility Testing: Use tools like Axe, react-a11y, Lighthouse for accessibility testing. Ensuring your app is accessible to all users is essential.
 
 - Load Testing: If your application is expected to handle heavy traffic, conduct load testing using tools like Apache JMeter or Gatling to ensure it can scale properly.
 

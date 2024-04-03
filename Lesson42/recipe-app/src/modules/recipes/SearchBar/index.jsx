@@ -57,6 +57,7 @@ export const SearchBar = () => {
 					error={!!inputError}
 					helperText={inputError}
 					fullWidth
+					data-testid='search-input'
 				/>
 			</form>
 			{searchError && <p>{searchError}</p>}
