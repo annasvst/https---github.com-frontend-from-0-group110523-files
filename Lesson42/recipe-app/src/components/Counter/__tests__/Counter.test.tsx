@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import { Counter } from '../index';
 
 test('<Counter /> should render correctly', function () {
