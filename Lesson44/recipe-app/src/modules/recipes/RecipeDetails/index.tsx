@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
-import Typography from "@mui/material/Typography";
-import { Recipe } from "../models";
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import Typography from '@mui/material/Typography';
+import { Recipe } from '../models';
 
 export async function fetchRecipeDetails(id: string) {
   const res = await fetch(
@@ -29,20 +29,20 @@ export const RecipeDetails = () => {
 
   return data ? (
     <>
-      <Typography variant="h3" component="h1" data-testid={"meal-title"}>
+      <Typography variant='h3' component='h1' data-testid={'meal-title'}>
         {data.strMeal}
       </Typography>
-      <Typography variant="body1" component="p">
+      <Typography variant='body1' component='p'>
         {data.strInstructions}
       </Typography>
       {data.strDrinkAlternate && (
-        <Typography variant="h3" component="h1">
+        <Typography variant='h3' component='h1'>
           Drink: {data.strDrinkAlternate}
         </Typography>
       )}
     </>
   ) : (
-    <Typography data-testid={"meal-not-found"} variant="subtitle1">
+    <Typography data-testid={'meal-not-found'} variant='subtitle1'>
       Recipe not found
     </Typography>
   );

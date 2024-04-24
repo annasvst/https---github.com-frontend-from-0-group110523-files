@@ -25,10 +25,10 @@ export interface Recipe {
 }
 
 export enum Categories {
-  Main = "Main",
-  Dessert = "Dessert",
-  Beef = "Beef",
-  Chicken = "Chicken",
+  Main = 'Main',
+  Dessert = 'Dessert',
+  Beef = 'Beef',
+  Chicken = 'Chicken',
 }
 
 export const allCategories = [
@@ -38,16 +38,16 @@ export const allCategories = [
 ];
 
 export enum Areas {
-  British = "British",
-  Indian = "Indian",
-  Canada = "Canada",
-  Malaysian = "Malaysian",
-  Turkish = "Turkish",
+  British = 'British',
+  Indian = 'Indian',
+  Canada = 'Canada',
+  Malaysian = 'Malaysian',
+  Turkish = 'Turkish',
 }
 
 export enum RecipeActionType {
-  UPDATE = "update",
-  DELETE_ALL = "delete_all",
+  UPDATE = 'update',
+  DELETE_ALL = 'delete_all',
 }
 
 export interface RecipeAction {
