@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import "./styles.css";
+import { useState, useEffect } from 'react';
+import './styles.css';
 
 export const RegistrationForm = () => {
   const initialFormState = {
-    username: "",
-    email: "",
-    phoneNumber: "",
-    password: "",
+    username: '',
+    email: '',
+    phoneNumber: '',
+    password: '',
   };
 
   const initialFormErrorsState = {
@@ -27,9 +27,9 @@ export const RegistrationForm = () => {
       formErrors.phoneNumber ||
       formErrors.password
     ) {
-      console.log("Please correct errors first!");
+      console.log('Please correct errors first!');
     } else {
-      console.log("Form submitted!");
+      console.log('Form submitted!');
       console.table(formData);
       setFormData(initialFormState);
     }
@@ -39,7 +39,7 @@ export const RegistrationForm = () => {
     if (formData.username.length < 5 && formData.username.length > 0) {
       setFormErrors((prevState) => ({
         ...prevState,
-        username: "Username must be more than 5 characters",
+        username: 'Username must be more than 5 characters',
       }));
     } else {
       setFormErrors((prevState) => ({
@@ -77,46 +77,46 @@ export const RegistrationForm = () => {
   };
 
   return (
-    <form className="registration-form" onSubmit={handleSubmit} noValidate>
-      <label htmlFor="user">User Name</label>
+    <form className='registration-form' onSubmit={handleSubmit} noValidate>
+      <label htmlFor='user'>User Name</label>
       <input
-        type="text"
-        id="user"
-        name="user"
+        type='text'
+        id='user'
+        name='user'
         value={formData.username}
         onChange={handleUserNameChange}
       />
 
       {formErrors.username ? <p>{formErrors.username}</p> : <></>}
 
-      <label htmlFor="email">Email</label>
+      <label htmlFor='email'>Email</label>
       <input
-        type="email"
-        id="email"
-        name="email"
+        type='email'
+        id='email'
+        name='email'
         value={formData.email}
         onChange={handleEmailChange}
       />
 
-      <label htmlFor="phoneNumber">Phone Number</label>
+      <label htmlFor='phoneNumber'>Phone Number</label>
       <input
-        type="tel"
-        id="phoneNumber"
-        name="phoneNumber"
+        type='tel'
+        id='phoneNumber'
+        name='phoneNumber'
         value={formData.phoneNumber}
         onChange={handlePhoneNumberChange}
       />
 
-      <label htmlFor="password">Password</label>
+      <label htmlFor='password'>Password</label>
       <input
-        type="password"
-        id="password"
-        name="password"
+        type='password'
+        id='password'
+        name='password'
         value={formData.password}
         onChange={handlePasswordChange}
       />
       <button
-        type="submit"
+        type='submit'
         disabled={
           formErrors.username ||
           formErrors.email ||

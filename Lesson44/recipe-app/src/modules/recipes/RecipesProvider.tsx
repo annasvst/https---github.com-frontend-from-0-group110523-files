@@ -1,6 +1,6 @@
-import { createContext, useReducer, useContext } from "react";
-import { type Recipe, type RecipeAction, RecipeActionType } from "./models";
-import type { ReactNode, Dispatch } from "react";
+import { createContext, useReducer, useContext } from 'react';
+import { type Recipe, type RecipeAction, RecipeActionType } from './models';
+import type { ReactNode, Dispatch } from 'react';
 
 interface RecipesProviderProps {
   children: ReactNode;

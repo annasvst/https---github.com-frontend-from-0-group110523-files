@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { type User } from "./models";
+import { createSlice } from '@reduxjs/toolkit';
+import { type User } from './models';
 
 export const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState: { loggedIn: false } as User,
   reducers: {
     login: (state) => {

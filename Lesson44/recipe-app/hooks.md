@@ -3,6 +3,7 @@
 React Hooks are functions that let you "hook into" React state and lifecycle features from function components. Here are some of the essential hooks:
 
 ## useState
+
 Allows you to add state to function components. Call setState to update the state, causing the component to re-render with the new state.
 
 ```javascript
@@ -10,6 +11,7 @@ const [state, setState] = useState(initialState);
 ```
 
 ## useEffect
+
 Lets you watch for a certain parameter to change and perform an aciton based on this change. (It's a replacement for lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount.)
 
 ```javascript

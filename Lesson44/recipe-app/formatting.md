@@ -42,3 +42,22 @@ Then, update your `.eslintrc` configuration to extend prettier. This tells ESLin
   "extends": ["react-app", "plugin:prettier/recommended"]
 }
 ```
+
+Aleternative version of .eslintrc (ESLint config). It was not needed in this project but may be needed for a porect with a different set up.
+
+```
+  {"extends": ["react-app",
+  "plugin:prettier/recommended"]
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "semi": true,
+      "singleQuote": true,
+      "jsxSingleQuote": true,
+      "trailingComma": "all",
+      "printWidth": 80,
+      "tabWidth": 2
+    }]
+  }
+  }
+```

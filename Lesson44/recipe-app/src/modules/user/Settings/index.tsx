@@ -1,15 +1,15 @@
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Paper from "@mui/material/Paper";
-import { useTheme } from "@mui/material/styles";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Paper from '@mui/material/Paper';
+import { useTheme } from '@mui/material/styles';
 
 interface UserData {
   userName: string;
@@ -26,9 +26,9 @@ export const Settings = () => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      userName: "",
-      email: "",
-      password: "",
+      userName: '',
+      email: '',
+      password: '',
     },
   });
 
@@ -44,55 +44,55 @@ export const Settings = () => {
       elevation={10}
       sx={{
         padding: theme.spacing(2),
-        width: "100vw",
-        maxWidth: "600px",
-        margin: "0 auto",
+        width: '100vw',
+        maxWidth: '600px',
+        margin: '0 auto',
       }}
     >
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <TextField
           fullWidth
-          role="user-name-input"
-          id="user-name-input"
-          label="User Name"
-          variant="standard"
-          {...register("userName", { required: true })}
+          role='user-name-input'
+          id='user-name-input'
+          label='User Name'
+          variant='standard'
+          {...register('userName', { required: true })}
           error={!!errors.userName}
-          helperText={errors.userName && "Please enter a user name"}
+          helperText={errors.userName && 'Please enter a user name'}
         />
         <TextField
           fullWidth
-          id="email-input"
-          type="email"
-          label="Email"
-          variant="standard"
-          {...register("email", { required: true })}
+          id='email-input'
+          type='email'
+          label='Email'
+          variant='standard'
+          {...register('email', { required: true })}
           error={!!errors.email}
-          helperText={errors.email && "Please enter an email"}
+          helperText={errors.email && 'Please enter an email'}
         />
         <TextField
           fullWidth
-          id="password-input"
-          type="password"
-          label="Password"
-          variant="standard"
-          {...register("password", { required: true, minLength: 8 })}
+          id='password-input'
+          type='password'
+          label='Password'
+          variant='standard'
+          {...register('password', { required: true, minLength: 8 })}
           error={!!errors.password}
           helperText={
-            errors.password && "Password should be at least 8 characters long"
+            errors.password && 'Password should be at least 8 characters long'
           }
         />
         <Stack
-          direction="row"
+          direction='row'
           spacing={{ xs: 1, sm: 2 }}
           useFlexGap
-          flexWrap="wrap"
+          flexWrap='wrap'
           sx={{ marginTop: 2 }}
         >
-          <Button type="submit" variant="contained">
+          <Button type='submit' variant='contained'>
             Save changes
           </Button>
-          <Button type="reset" color="warning" variant="contained">
+          <Button type='reset' color='warning' variant='contained'>
             Clear
           </Button>
         </Stack>
@@ -101,12 +101,12 @@ export const Settings = () => {
       <Dialog
         open={showDialog}
         onClose={() => setShowDialog(false)}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
+        aria-labelledby='alert-dialog-title'
+        aria-describedby='alert-dialog-description'
       >
-        <DialogTitle id="alert-dialog-title">Update successful!</DialogTitle>
+        <DialogTitle id='alert-dialog-title'>Update successful!</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+          <DialogContentText id='alert-dialog-description'>
             The account information has been successfully updated.
           </DialogContentText>
         </DialogContent>

@@ -1,13 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { Recipe, RecipesSliceState } from "./models";
-import { useSelector } from "react-redux";
+import { createSlice } from '@reduxjs/toolkit';
+import { Recipe, RecipesSliceState } from './models';
+import { useSelector } from 'react-redux';
 
 interface RecipeAction {
   payload: Recipe[];
 }
 
 export const recipesSlice = createSlice({
-  name: "recipes",
+  name: 'recipes',
   initialState: [] as Recipe[],
   reducers: {
     updateRecipes: (state, action: RecipeAction) => {
