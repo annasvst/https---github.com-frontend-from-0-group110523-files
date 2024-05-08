@@ -1,7 +1,7 @@
 import { RecipeDetails } from '../RecipeDetails';
 import { fetchRecipeDetails } from '../RecipeDetails/data-fetching';
-import { act, render, screen } from '@testing-library/react';
-import { BrowserRouter, useParams } from 'react-router-dom';
+import { act, fireEvent, render, screen } from '@testing-library/react';
+import { BrowserRouter, useNavigate, useParams } from 'react-router-dom';
 import { mockedRecipe } from '../../../test-utils/mocked-recipe';
 import '@testing-library/jest-dom';
 
@@ -13,6 +13,7 @@ jest.mock('react-router-dom', function () {
   return {
     ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(),
+    useNavigate: jest.fn()
   };
 });
 
@@ -32,12 +33,12 @@ describe('<RecipeDetails /> component', function () {
     const recipeTitle = screen.queryByTestId('meal-title');
     expect(recipeTitle).not.toBeInTheDocument();
 
-    expect(screen.queryByTestId('loading-indicator')).toBeInTheDocument();
+    expect(screen.getByTestId('loading-indicator')).toBeInTheDocument();
   });
 
   it('should render recipe data if recipe can be fetch from API', async function () {
     (useParams as jest.Mock).mockReturnValue({
-      id: mockedRecipe.idMeal,
+      id: 'abc',
     });
 
     (fetchRecipeDetails as jest.Mock).mockReturnValue(mockedRecipe);
@@ -49,10 +50,40 @@ describe('<RecipeDetails /> component', function () {
         </BrowserRouter>,
       );
     });
+
     const recipeTitle = screen.getByTestId('meal-title');
     expect(recipeTitle).toBeInTheDocument();
     expect(recipeTitle).toHaveTextContent(mockedRecipe.strMeal);
 
     expect(screen.queryByTestId('loading-indicator')).not.toBeInTheDocument();
   });
+
+  it('should handle go back buttom click correctly', async function () {
+    (useParams as jest.Mock).mockReturnValue({
+      id: 'abc',
+    });
+
+    (fetchRecipeDetails as jest.Mock).mockReturnValue(mockedRecipe);
+
+    // const handleGoBack = jest.fn();
+    const navigate = jest.fn();
+    (useNavigate as jest.Mock).mockReturnValue(navigate);
+
+    await act(async () => {
+      render(
+        <BrowserRouter>
+          <RecipeDetails />
+        </BrowserRouter>,
+      );
+    });
+
+    const goBackButton = screen.getByTestId('go-back-btn');
+    expect(goBackButton).toBeInTheDocument();
+
+    fireEvent.click(goBackButton);
+    // expect(handleGoBack).toHaveBeenCalledTimes(1);
+    expect(navigate).toHaveBeenCalledTimes(1);
+    expect(navigate).toHaveBeenCalledWith(-1);
+  });
+
 });

@@ -19,4 +19,17 @@ describe('<RecipeList />', function () {
     const recipeCard = screen.getByTestId('recipe-card');
     expect(recipeCard).toBeInTheDocument();
   });
+
+  it('should render all list items correctly', async function () {
+    render(
+      <BrowserRouter>
+        <Provider store={mockedStore([mockedRecipe, mockedRecipe])}>
+          <RecipeList />
+        </Provider>
+      </BrowserRouter>,
+    );
+
+    const recipeCards = screen.getAllByTestId('recipe-card');
+    expect(recipeCards).toHaveLength(2);
+  });
 });

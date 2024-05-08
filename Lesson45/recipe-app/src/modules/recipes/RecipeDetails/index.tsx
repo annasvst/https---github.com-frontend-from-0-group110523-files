@@ -41,7 +41,7 @@ export const RecipeDetails = () => {
         </Typography>
       )}
 
-      <Button color='primary' onClick={handleGoBack}>
+      <Button color='primary' data-testid='go-back-btn' onClick={handleGoBack}>
         Go back
       </Button>
     </Stack>
